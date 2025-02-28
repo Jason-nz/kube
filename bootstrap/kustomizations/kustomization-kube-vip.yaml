@@ -13,6 +13,6 @@ spec:
     name: flux-system
 #  healthChecks:
 #    - apiVersion: apps/v1
-#      kind: daemonset
+#      kind: daemonSet
 #      name: kube-vip-ds
 #      namespace: kube-system
