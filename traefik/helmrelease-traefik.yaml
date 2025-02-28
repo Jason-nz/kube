@@ -4,6 +4,7 @@ metadata:
   name: traefik
   namespace: traefik
 spec:
+  loadBalancerIP: 0.0.0.0
   chart:
     spec:
       chart: traefik
