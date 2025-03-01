@@ -6,4 +6,5 @@ metadata:
   namespace: traefik
 data:
   values.yaml: |-  
-    # <upstream values go here>
+    service:
+      
