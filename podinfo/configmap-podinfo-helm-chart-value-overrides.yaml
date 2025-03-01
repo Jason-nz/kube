@@ -35,7 +35,7 @@ data:
 
     # Kubernetes Service settings
     service:
-      enabled: true
+      enabled: false
       annotations: {}
       type: LoadBalancer
       metricsPort: 9797
