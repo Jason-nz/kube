@@ -7,4 +7,4 @@ metadata:
 data:
   values.yaml: |-  
     service:
-      
+      loadBalancerIP: 0.0.0.0
