@@ -6,7 +6,6 @@ metadata:
   annotations:
     "kube-vip.io/loadbalancerIPs": "0.0.0.0"
 spec:
-  loadBalancerIP: 0.0.0.0
   chart:
     spec:
       chart: traefik
