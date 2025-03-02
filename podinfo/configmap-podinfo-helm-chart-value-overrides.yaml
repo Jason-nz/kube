@@ -38,6 +38,7 @@ data:
       enabled: true
       annotations:
         kube-vip.io/loadbalancerIPs: "0.0.0.0"
+        kube-vip.io/loadbalancerHostname: podinfo
       type: LoadBalancer
       metricsPort: 9797
       httpPort: 9898
