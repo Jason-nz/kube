@@ -39,7 +39,7 @@ data:
       annotations: {} 
 #        kube-vip.io/loadbalancerIPs: "0.0.0.0"
 #        kube-vip.io/loadbalancerHostname: podinfo
-#      type: LoadBalancer
+      type: ClusterIP
       metricsPort: 9797
       httpPort: 9898
       externalPort: 9898
