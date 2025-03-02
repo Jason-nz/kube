@@ -36,7 +36,7 @@ data:
     # Kubernetes Service settings
     service:
       enabled: true
-#      annotations:
+      annotations: {} 
 #        kube-vip.io/loadbalancerIPs: "0.0.0.0"
 #        kube-vip.io/loadbalancerHostname: podinfo
 #      type: LoadBalancer
