@@ -38,8 +38,6 @@ data:
       enabled: true
       annotations: {}
       type: LoadBalancer
-      spec:
-        loadBalancerIP: 0.0.0.0
       metricsPort: 9797
       httpPort: 9898
       externalPort: 9898
