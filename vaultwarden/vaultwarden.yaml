@@ -40,6 +40,8 @@ metadata:
   name: vaultwarden-service
   namespace: default
 spec:
+  loadBalancerIP: 0.0.0.0
+  type: LoadBalancer
   selector:
     app: vaultwarden
   ports:
