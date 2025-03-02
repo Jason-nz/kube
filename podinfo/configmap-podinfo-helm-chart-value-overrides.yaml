@@ -36,10 +36,10 @@ data:
     # Kubernetes Service settings
     service:
       enabled: true
-      annotations:
-        kube-vip.io/loadbalancerIPs: "0.0.0.0"
-        kube-vip.io/loadbalancerHostname: podinfo
-      type: LoadBalancer
+#      annotations:
+#        kube-vip.io/loadbalancerIPs: "0.0.0.0"
+#        kube-vip.io/loadbalancerHostname: podinfo
+#      type: LoadBalancer
       metricsPort: 9797
       httpPort: 9898
       externalPort: 9898
@@ -110,13 +110,13 @@ data:
     securityContext: {}
 
     ingress:
-      enabled: false
+      enabled: true
       className: ""
       annotations: {}
         # kubernetes.io/ingress.class: nginx
         # kubernetes.io/tls-acme: "true"
       hosts:
-        - host: podinfo.local
+        - host: podinfo.thecullensnz.com
           paths:
             - path: /
               pathType: ImplementationSpecific
