@@ -83,10 +83,10 @@ metadata:
   name: vaultwarden
   namespace: default
 spec:
-  tls:
-  - hosts:
-    - "*.thecullensnz.com"
-    secretName: letsencrypt-wildcard-cert-thecullensnz.com
+  #tls:
+  #- hosts:
+  #- "*.thecullensnz.com"
+  #   secretName: letsencrypt-wildcard-cert-thecullensnz.com
   rules:
   - host: "vault.thecullensnz.com"
     http:
