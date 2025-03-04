@@ -3,4 +3,4 @@ service:
     annotations: 
       kube-vip.io/loadbalancerIPs: "192.168.1.21"
       kube-vip.io/loadbalancerHostname: traefik
-    loadBalancerIP: 192.168.1.21
+    loadBalancerIP: 0.0.0.0
