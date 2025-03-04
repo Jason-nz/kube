@@ -9,7 +9,7 @@ spec:
   chart:
     spec:
       chart: traefik
-      version: 10.x 
+      version: 10.x
       sourceRef:
         kind: HelmRepository
         name: traefik
@@ -19,5 +19,4 @@ spec:
   releaseName: traefik
   valuesFrom:
   - kind: ConfigMap
-    name: traefik-helm-chart-value-overrides
-    valuesKey: values.yaml # This is the default, but best to be explicit for clarity
+    name: traefik-values
