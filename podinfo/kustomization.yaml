@@ -4,7 +4,7 @@ namespace: podinfo
 resources:
   #- namespace.yaml
   #- repository.yaml
-  - release.yaml
+  - helmrelease-podinfo.yaml
 configMapGenerator:
   - name: podinfo-values
     files:
