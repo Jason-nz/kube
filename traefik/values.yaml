@@ -766,9 +766,9 @@ service:
   single: true
   type: LoadBalancer
   # -- Additional annotations applied to both TCP and UDP services (e.g. for cloud provider specific config)
-  annotations:
-    kube-vip.io/loadbalancerIPs: "0.0.0.0"
-    kube-vip.io/loadbalancerHostname: traefik
+  annotations: {} 
+  #  kube-vip.io/loadbalancerIPs: "0.0.0.0"
+  #  kube-vip.io/loadbalancerHostname: traefik
   # -- Additional annotations for TCP service only
   annotationsTCP: {}
   # -- Additional annotations for UDP service only
