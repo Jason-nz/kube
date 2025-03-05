@@ -8,7 +8,7 @@ image:  # @schema additionalProperties: false
   # -- Traefik image repository
   repository: traefik
   # -- defaults to appVersion
-  tag:  # @schema type:[string, null]
+  tag: 3.3.3 # @schema type:[string, null]
   # -- Traefik image pull policy
   pullPolicy: IfNotPresent
 
