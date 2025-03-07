@@ -1211,6 +1211,8 @@ grafana:
   enabled: true
   namespaceOverride: ""
 
+  service:
+    type: LoadBalancer
   ## ForceDeployDatasources Create datasource configmap even if grafana deployment has been disabled
   ##
   forceDeployDatasources: false
