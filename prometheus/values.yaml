@@ -1249,7 +1249,7 @@ grafana:
   ingress:
     ## If true, Grafana Ingress will be created
     ##
-    enabled: false
+    enabled: 
 
     ## IngressClassName for Grafana Ingress.
     ## Should be provided if Ingress is enable.
@@ -1269,9 +1269,9 @@ grafana:
     ## Hostnames.
     ## Must be provided if Ingress is enable.
     ##
-    # hosts:
-    #   - grafana.domain.com
-    hosts: []
+    hosts:
+      - grafana.thecullensnz.com
+    #hosts: []
 
     ## Path for grafana ingress
     path: /
