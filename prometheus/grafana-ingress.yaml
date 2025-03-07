@@ -5,7 +5,7 @@ metadata:
   namespace: monitoring
 spec:
   rules:
-    - host: *
+    - host: graph.thecullensnz.com
       http:
         paths:
           - path: /
