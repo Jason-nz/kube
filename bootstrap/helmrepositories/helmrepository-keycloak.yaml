@@ -4,6 +4,6 @@ metadata:
   name: keycloak
   namespace: flux-system
 spec:
-  #type: "oci"
+  type: "oci"
   interval: 15m
   url: https://charts.bitnami.com/bitnami
