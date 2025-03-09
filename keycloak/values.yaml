@@ -1387,4 +1387,4 @@ cache:
 ##
 logging:
   output: default
-  level: INFO
+  level: DEBUG
