@@ -660,11 +660,11 @@ ports:
       # -- Trust forwarded headers information (X-Forwarded-*).
       trustedIPs:
         - "192.168.1.4"
-      insecure: false
+      insecure: true
     proxyProtocol:
       # -- Enable the Proxy Protocol header parsing for the entry point
       trustedIPs: []
-      insecure: false
+      insecure: true
     # -- Set transport settings for the entrypoint; see also
     # https://doc.traefik.io/traefik/routing/entrypoints/#transport
     transport:
