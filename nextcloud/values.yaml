@@ -584,9 +584,9 @@ cronjob:
   - /cron.sh
 
 service:
-  type: ClusterIP
+  type: LoadBalancer
   port: 8080
-  loadBalancerIP: ""
+  loadBalancerIP: "0.0.0.0"
   nodePort:
   # -- use additional annotation on service for nextcloud
   annotations: {}
