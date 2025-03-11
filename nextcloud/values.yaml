@@ -74,7 +74,7 @@ phpClientHttpsFix:
   protocol: https
 
 nextcloud:
-  host: nextcloud.kube.home
+  host: files.thecullensnz.com
   username: admin
   password: changeme
   ## Use an existing secret
