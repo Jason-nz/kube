@@ -494,7 +494,7 @@ redis:
     persistence:
       enabled: true
   replica:
-    replicaCount: 1
+    replicaCount: 0
     persistence:
       enabled: true
 
