@@ -23,7 +23,7 @@ replicaCount: 1
 ## ref: https://kubernetes.io/docs/concepts/services-networking/ingress/
 ##
 ingress:
-  enabled: false
+  enabled: true
   # className: nginx
   annotations: {}
   #  nginx.ingress.kubernetes.io/proxy-body-size: 4G
@@ -538,12 +538,12 @@ collabora:
   # setup ingress
   ingress:
     # enable ingress for collabora online
-    enabled: false
+    enabled: true
     className: ""
     # please check collabora values.yaml for nginx/haproxy annotations examples
     annotations: {}
     hosts:
-      - host: chart-example.local
+      - host: office.thecullensnz.com
         paths:
         - path: /
           pathType: ImplementationSpecific
@@ -560,7 +560,7 @@ collabora:
 ## ref: https://docs.nextcloud.com/server/latest/admin_manual/configuration_server/background_jobs_configuration.html#cron
 ##
 cronjob:
-  enabled: false
+  enabled: true
 
   ## Cronjob sidecar resource requests and limits
   ## ref: http://kubernetes.io/docs/user-guide/compute-resources/
