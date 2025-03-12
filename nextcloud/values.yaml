@@ -70,7 +70,7 @@ lifecycle: {}
   # preStopCommand: []
 
 phpClientHttpsFix:
-  enabled: false
+  enabled: true
   protocol: https
 
 nextcloud:
@@ -479,7 +479,7 @@ postgresql:
 ##
 
 redis:
-  enabled: false
+  enabled: true
   auth:
     enabled: true
     password: 'changeme'
@@ -502,7 +502,7 @@ redis:
 ## for more options see https://github.com/CollaboraOnline/online/tree/master/kubernetes/helm/collabora-online
 ##
 collabora:
-  enabled: false
+  enabled: true
 
   autoscaling:
     # enable autocaling, please check collabora README.md first
