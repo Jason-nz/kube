@@ -5,6 +5,7 @@ resources:
   #- namespace.yaml
   #- repository.yaml
   - sealed-secret-nextcloud-admin.yaml
+  - sealed-secret-nextcloud-database.yaml
   - helmrelease-nextcloud.yaml
 configMapGenerator:
   - name: nextcloud-values
