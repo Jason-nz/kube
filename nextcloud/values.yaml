@@ -465,7 +465,7 @@ postgresql:
         secretKeys:
           adminPasswordKey: "database-password"
           userPasswordKey: "database-user"
-          replicationPasswordKey: ""
+          replicationPasswordKey: "replication-password"
   primary:
     persistence:
       enabled: true
