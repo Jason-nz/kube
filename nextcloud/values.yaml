@@ -448,7 +448,7 @@ mariadb:
 ## for more options see https://github.com/bitnami/charts/tree/main/bitnami/postgresql
 ##
 postgresql:
-  enabled: false
+  enabled: true
   global:
     postgresql:
       # global.postgresql.auth overrides postgresql.auth
@@ -460,15 +460,15 @@ postgresql:
         # auth.postgresPassword, auth.password, and auth.replicationPassword will be ignored and picked up from this secret.
         # secret might also contains the key ldap-password if LDAP is enabled.
         # ldap.bind_password will be ignored and picked from this secret in this case.
-        existingSecret: ""
+        existingSecret: "nextcloud-database"
         # Names of keys in existing secret to use for PostgreSQL credentials
         secretKeys:
-          adminPasswordKey: ""
-          userPasswordKey: ""
+          adminPasswordKey: "database-password"
+          userPasswordKey: "database-user"
           replicationPasswordKey: ""
   primary:
     persistence:
-      enabled: false
+      enabled: true
       # Use an existing Persistent Volume Claim (must be created ahead of time)
       # existingClaim: ""
       # storageClass: ""
