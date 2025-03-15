@@ -401,7 +401,7 @@ externalDatabase:
   existingSecret:
     enabled: true
     secretName: nextcloud-database
-    usernameKey: nextcloud-user
+    usernameKey: database-user
     passwordKey: database-user-password
     # hostKey: db-hostname-or-ip
     # databaseKey: db-name
