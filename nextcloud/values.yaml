@@ -585,9 +585,9 @@ cronjob:
   - /cron.sh
 
 service:
-  type: LoadBalancer
+  type: ClusterIP
   port: 8080
-  loadBalancerIP: "0.0.0.0"
+  loadBalancerIP: ""
   nodePort:
   # -- use additional annotation on service for nextcloud
   annotations: {}
@@ -597,7 +597,7 @@ service:
 ##
 persistence:
   # Nextcloud Data (/var/www/html)
-  enabled: false
+  enabled: true
   annotations: {}
   ## nextcloud data Persistent Volume Storage Class
   ## If defined, storageClassName: <storageClass>
