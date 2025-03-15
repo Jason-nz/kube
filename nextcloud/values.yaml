@@ -401,7 +401,7 @@ externalDatabase:
   existingSecret:
     enabled: true
     secretName: nextcloud-database
-    usernameKey: database-user
+    usernameKey: nextcloud-user
     passwordKey: database-password
     # hostKey: db-hostname-or-ip
     # databaseKey: db-name
@@ -453,7 +453,7 @@ postgresql:
     postgresql:
       # global.postgresql.auth overrides postgresql.auth
       auth:
-        #username: nextcloud
+        username: nextcloud
         #password: changeme
         #database: nextcloud
         # Name of existing secret to use for PostgreSQL credentials.
@@ -463,8 +463,8 @@ postgresql:
         existingSecret: "nextcloud-database"
         # Names of keys in existing secret to use for PostgreSQL credentials
         secretKeys:
-          adminPasswordKey: "database-password"
-          userPasswordKey: "database-user"
+          adminPasswordKey: "database-admin-password"
+          userPasswordKey: "database-user-password"
           replicationPasswordKey: "replication-password"
   primary:
     persistence:
