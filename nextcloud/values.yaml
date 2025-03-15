@@ -386,7 +386,7 @@ externalDatabase:
   type: postgresql
 
   ## Database host. You can optionally include a colon delimited port like "myhost:1234"
-  host: ""
+  host: nextcloud-postgresql
 
   ## Database user
   user: nextcloud
