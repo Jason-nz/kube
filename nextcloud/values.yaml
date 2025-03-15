@@ -75,8 +75,8 @@ phpClientHttpsFix:
 
 nextcloud:
   host: files.thecullensnz.com
-  username: admin
-  password: changeme
+  #username: admin
+  #password: changeme
   ## Use an existing secret
   existingSecret:
     enabled: true
