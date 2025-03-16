@@ -1,2 +1,8 @@
 ingress:
   enabled: true
+
+
+nextcloud:
+  host: https://files.thecullensnz.com
+
+
