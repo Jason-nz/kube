@@ -4,4 +4,23 @@ ingress:
 nextcloud:
   host: files.thecullensnz.com
 
+image:
+  flavor: fpm
 
+nginx:
+  enabled: true
+
+postgresql:
+  enabled: true
+  global:
+    postgresql:
+      auth:
+        password: "testing123456"
+
+internalDatabase:
+  enabled: false
+
+externalDatabase:
+  enabled: true
+  type: postgresql
+  password: "testing123456"
