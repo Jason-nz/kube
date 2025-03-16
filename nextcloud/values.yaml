@@ -5,7 +5,7 @@ nextcloud:
   host: files.thecullensnz.com
 
 image:
-  flavor: fpm
+  tag: 31.0.1-fpm-alpine
 
 nginx:
   enabled: true
