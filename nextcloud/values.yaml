@@ -31,3 +31,9 @@ redis:
   architecture: standalone
   auth:
     enabled: false
+
+cronjob:
+  enabled: true
+
+persistence:
+  enabled: true
