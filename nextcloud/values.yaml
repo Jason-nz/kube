@@ -24,3 +24,6 @@ externalDatabase:
   enabled: true
   type: postgresql
   password: "testing123456"
+
+redis:
+  enable: true
