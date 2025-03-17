@@ -17,6 +17,9 @@ postgresql:
     postgresql:
       auth:
         password: "testing123456"
+  primary:
+    persistence:
+      enabled: true
 
 internalDatabase:
   enabled: false
