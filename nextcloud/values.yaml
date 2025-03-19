@@ -1,5 +1,7 @@
 ingress:
   enabled: true
+  annotations:
+    traefik.ingress.kubernetes.io/router.middlewares: nextcloud-nextcloud-middleware-headers@kubernetescrd,nextcloud-nextcloud-middleware-regex@kubernetescrd
 
 nextcloud:
   host: files.thecullensnz.com
