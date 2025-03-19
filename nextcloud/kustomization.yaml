@@ -7,7 +7,7 @@ resources:
   - sealed-secret-nextcloud-admin.yaml
   - sealed-secret-nextcloud-database.yaml
   - helmrelease-nextcloud.yaml
-  # - traefik-middleware.yaml
+  - traefik-middleware.yaml
 configMapGenerator:
   - name: nextcloud-values
     files:
