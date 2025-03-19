@@ -5,6 +5,16 @@ ingress:
 
 nextcloud:
   host: files.thecullensnz.com
+  extraEnv:
+    - name: OVERWRITEPROTOCOL
+      value: https
+    - name: OVERWRITEHOST
+      value: files.thecullensnz.com
+    - name: overwrite.cli.url
+      value: https://files.thecullensnz.com
+    # This is the Cluster Ip of the loadbalancer
+    - name: TRUSTED_PROXIES
+      value: 10.42.0.109
 
 image:
   tag: 31.0.1-fpm-alpine
