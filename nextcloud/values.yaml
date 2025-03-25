@@ -17,6 +17,7 @@ nextcloud:
       value: 10.42.0.109
 
 image:
+  repository: nextcloud
   tag: 31.0.1-fpm-alpine
 
 nginx:
