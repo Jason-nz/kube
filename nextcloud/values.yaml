@@ -24,7 +24,7 @@ nextcloud:
     - name: before-starting-scripts
       configMap:
         name: before-starting-scripts
-        defaultMode: 0550
+        #defaultMode: 0550
    extraVolumeMounts:
     - name: before-starting-scripts
       mountPath: /docker-entrypoint-hooks.d/before-starting
