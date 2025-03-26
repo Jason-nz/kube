@@ -57,6 +57,7 @@ externalDatabase:
   existingSecret:
     enabled: true
     secretName: "nextcloud-database"
+    usernameKey: "database-user"
     passwordKey: "database-user-password"
 
 redis:
