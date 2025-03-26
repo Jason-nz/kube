@@ -34,7 +34,12 @@ postgresql:
   global:
     postgresql:
       auth:
-        password: "testing123456"
+      existingSecret: "nextcloud-database"
+        # Names of keys in existing secret to use for PostgreSQL credentials
+        secretKeys:
+          adminPasswordKey: "database-admin-password"
+          userPasswordKey: "database-user-password"
+          replicationPasswordKey: "replication-password"
   primary:
     persistence:
       enabled: true
@@ -45,7 +50,10 @@ internalDatabase:
 externalDatabase:
   enabled: true
   type: postgresql
-  password: "testing123456"
+  existingSecret:
+    enabled: true
+    secretName: "nextcloud-database"
+    passwordKey: "database-user-password"
 
 redis:
   enabled: true
