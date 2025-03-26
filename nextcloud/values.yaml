@@ -38,11 +38,10 @@ postgresql:
     postgresql:
       auth:
       existingSecret: "nextcloud-database"
-        # Names of keys in existing secret to use for PostgreSQL credentials
-        secretKeys:
-          adminPasswordKey: "database-admin-password"
-          userPasswordKey: "database-user-password"
-          replicationPasswordKey: "replication-password"
+      secretKeys:
+        adminPasswordKey: "database-admin-password"
+        userPasswordKey: "database-user-password"
+        replicationPasswordKey: "replication-password"
   primary:
     persistence:
       enabled: true
