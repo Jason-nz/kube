@@ -4,7 +4,7 @@ namespace: nextcloud
 resources:
   #- namespace.yaml
   #- repository.yaml
-  - sealed-secret-nextcloud-admin.yaml
+  - sealed-secret-nextcloud-login.yaml
   - sealed-secret-nextcloud-database.yaml
   - helmrelease-nextcloud.yaml
   - traefik-middleware.yaml
