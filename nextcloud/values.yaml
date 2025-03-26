@@ -5,6 +5,11 @@ ingress:
 
 nextcloud:
   host: files.thecullensnz.com
+  existingSecret:
+    enabled: true
+    secretName: nextcloud-login
+    usernameKey: nextcloud-username
+    passwordKey: nextcloud-password
   extraEnv:
     - name: OVERWRITEPROTOCOL
       value: https
