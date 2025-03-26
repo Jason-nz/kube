@@ -21,6 +21,9 @@ nextcloud:
     - name: TRUSTED_PROXIES
       value: 10.42.0.109
 
+lifecycle:
+  postStartCommand: ["su", "-s", "/bin/sh", "www-data", "-c", "php occ app:enable user_oidc"]
+
 image:
   repository: nextcloud
   tag: 31.0.2-fpm-alpine
