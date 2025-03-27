@@ -12,6 +12,7 @@ data:
     php /var/www/html/occ app:install bookmarks
     php /var/www/html/occ app:install deck
     php /var/www/html/occ app:install news
+    php /var/www/html/occ app:install groupfolders
     #php /var/www/html/occ app:install side_menu
     php /var/www/html/occ config:system:set maintenance_window_start --type=integer --value=1
     php /var/www/html/occ db:add-missing-indices
