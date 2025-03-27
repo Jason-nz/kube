@@ -6,14 +6,13 @@ metadata:
 data:
   install-apps.sh: |
     #!/bin/sh
-    sleep 600
     echo "Installing Nextcloud apps..."
     php /var/www/html/occ app:install user_oidc
     php /var/www/html/occ app:install notes
     php /var/www/html/occ app:install bookmarks
     php /var/www/html/occ app:install deck
     php /var/www/html/occ app:install news
-    php /var/www/html/occ app:install side_menu
+    #php /var/www/html/occ app:install side_menu
     php /var/www/html/occ config:system:set maintenance_window_start --type=integer --value=1
     php /var/www/html/occ db:add-missing-indices
     php /var/www/html/occ maintenance:repair --include-expensive
