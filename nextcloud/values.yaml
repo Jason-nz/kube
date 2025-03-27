@@ -35,7 +35,7 @@ image:
 
 nginx:
   enabled: true
-    config:
+  config:
     # This generates the default nginx config as per the nextcloud documentation
     default: true
     headers:
