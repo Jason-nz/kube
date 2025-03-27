@@ -6,6 +6,7 @@ metadata:
 data:
   install-apps.sh: |
     #!/bin/sh
+    sleep 600
     echo "Installing Nextcloud apps..."
     php /var/www/html/occ app:install user_oidc
     php /var/www/html/occ app:install notes
@@ -13,7 +14,7 @@ data:
     php /var/www/html/occ app:install deck
     php /var/www/html/occ app:install news
     php /var/www/html/occ app:install groupfolders
-    php /var/www/html/occ config:app:set --value false firstrunwizard wizard_enabled
+    #php /var/www/html/occ config:app:set --value false firstrunwizard wizard_enabled
     #php /var/www/html/occ app:install side_menu
     php /var/www/html/occ config:system:set maintenance_window_start --type=integer --value=1
     php /var/www/html/occ db:add-missing-indices
