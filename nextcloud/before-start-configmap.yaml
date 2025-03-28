@@ -17,5 +17,5 @@ data:
     php /var/www/html/occ app:install side_menu
     php /var/www/html/occ config:system:set maintenance_window_start --type=integer --value=1
     php /var/www/html/occ db:add-missing-indices
-    #php /var/www/html/occ maintenance:repair --include-expensive
+    php /var/www/html/occ maintenance:repair --include-expensive
     echo "Nextcloud apps installation complete."
