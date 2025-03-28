@@ -2,7 +2,7 @@
 apiVersion: v1
 kind: ConfigMap
 metadata:
-  name: before-starting-scripts
+  name: post-installation-scripts
 data:
   install-apps.sh: |
     #!/bin/sh
