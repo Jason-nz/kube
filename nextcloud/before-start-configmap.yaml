@@ -18,4 +18,6 @@ data:
     php /var/www/html/occ config:system:set maintenance_window_start --type=integer --value=1
     php /var/www/html/occ db:add-missing-indices
     php /var/www/html/occ maintenance:repair --include-expensive
+    php /var/www/html/occ user_oidc:provider keycloak --clientid="nextcloud" \
+    --clientsecret="j2ecUssTHhdIyz1HVZDZcdWP1fHxtuz5" --discoveryuri="https://login.thecullensnz.com/openid-configuration"
     echo "Nextcloud apps installation complete."
