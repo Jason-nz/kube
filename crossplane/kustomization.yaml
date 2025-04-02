@@ -5,6 +5,7 @@ resources:
   #- namespace.yaml
   #- repository.yaml
   - helmrelease-crossplane.yaml
+  - provider-keycloak-admin.yaml
 configMapGenerator:
   - name: crossplane-values
     files:
