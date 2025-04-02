@@ -10,5 +10,3 @@ resources:
 - database.yaml
 - keycloak-ingress.yaml
 - keycloak-db-secret.yaml
-- keycloak-client-config.yaml
-- provider-keycloak-admin.yaml
