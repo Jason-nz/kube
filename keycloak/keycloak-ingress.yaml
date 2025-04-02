@@ -13,4 +13,14 @@ spec:
       port:
         name: http
   rules:
-  - host: "login.thecullensnz.com" 
+  - host: "login.thecullensnz.com"
+    http:
+      paths:
+      - backend: 
+          service:
+            name: keycloak-instance-service
+            port:
+              name: http
+        path: /
+        pathType: Prefix
+        
