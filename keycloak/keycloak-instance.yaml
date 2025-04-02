@@ -17,7 +17,7 @@ spec:
   http:
     httpEnabled: true
   hostname:
-    hostname: https://keycloak.local.amazinglyabstract.it
+    hostname: https://login.thecullensnz.com
     backchannelDynamic: true
   proxy:
     headers: xforwarded
