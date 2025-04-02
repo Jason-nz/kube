@@ -16,7 +16,7 @@ spec:
     secretRef:
       name: keycloak-credentials
       key: credentials
-      namespace: crossplane-system
+      namespace: crossplane
 ---
 apiVersion: v1
 kind: Secret
