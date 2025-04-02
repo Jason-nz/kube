@@ -1,0 +1,137 @@
+apiVersion: realm.keycloak.crossplane.io/v1alpha1
+kind: Realm
+metadata:
+  name: home
+spec:
+  forProvider:
+    realm: home
+  providerConfigRef:
+    name: home
+---
+apiVersion: openidclient.keycloak.crossplane.io/v1alpha1
+kind: Client
+metadata:
+  name: grafana
+spec:
+  forProvider:
+    accessType: CONFIDENTIAL
+    adminUrl: https://login.thecullensnz.com/
+    clientId: nextcloud
+    directAccessGrantsEnabled: true
+    name: nextcloud
+    baseUrl: https://files.thecullensnz.com/
+    standardFlowEnabled: true
+    validPostLogoutRedirectUris:
+      - https://files.thecullensnz.com/login
+    validRedirectUris:
+      - https://files.thecullensnz.com/index.php/apps/user_oidc/code
+    webOrigins:
+      - https://files.thecullensnz.com
+    realmIdRef:
+      name: "home"
+  providerConfigRef:
+    name: home
+  writeConnectionSecretToRef:
+    name: nextcloud-oauth-client
+    namespace: nextcloud
+---
+apiVersion: openidclient.keycloak.crossplane.io/v1alpha1
+kind: ClientDefaultScopes
+metadata:
+  name: nextcloud
+spec:
+  forProvider:
+    clientIdRef:
+      name: nextcloud
+    realmIdRef:
+      name: "home"
+    defaultScopes:
+    - openid
+  providerConfigRef:
+    name: home
+---
+apiVersion: openidclient.keycloak.crossplane.io/v1alpha1
+kind: ClientOptionalScopes
+metadata:
+  name: nextcloud
+spec:
+  forProvider:
+    clientIdRef:
+      name: nextcloud
+    realmIdRef:
+      name: "home"
+    optionalScopes: 
+    - email
+    - profile
+    - offline_access
+    - roles
+  providerConfigRef:
+    name: home
+---
+apiVersion: role.keycloak.crossplane.io/v1alpha1
+kind: Role
+metadata:
+  name: nextcloud-viewer
+spec:
+  forProvider:
+    clientIdRef:
+      name: nextcloud
+    realmIdRef:
+      name: "home"
+    name: viewer
+  providerConfigRef:
+    name: nextcloud
+---
+apiVersion: role.keycloak.crossplane.io/v1alpha1
+kind: Role
+metadata:
+  name: nextcloud-editor
+spec:
+  forProvider:
+    clientIdRef:
+      name: nextcloud
+    realmIdRef:
+      name: "home"
+    name: editor
+  providerConfigRef:
+    name: home
+---
+apiVersion: role.keycloak.crossplane.io/v1alpha1
+kind: Role
+metadata:
+  name: nextcloud-admin
+spec:
+  forProvider:
+    clientIdRef:
+      name: nextcloud
+    realmIdRef:
+      name: "home"
+    name: admin
+  providerConfigRef:
+    name: home
+---
+apiVersion: client.keycloak.crossplane.io/v1alpha1
+kind: ProtocolMapper
+metadata:
+  name: client-role
+spec:
+  forProvider:
+    clientIdRef:
+      name: nextcloud
+    name: "client roles"
+    realmIdRef:
+      name: "home"
+    protocol: "openid-connect"
+    protocolMapper: "oidc-usermodel-client-role-mapper"
+    config: {
+        "introspection.token.claim" : "false",
+        "multivalued" : "true",
+        "userinfo.token.claim" : "true",
+        "id.token.claim" : "false",
+        "lightweight.claim" : "false",
+        "access.token.claim" : "false",
+        "claim.name" : "resource_access.${client_id}.roles",
+        "jsonType.label" : "String"
+    }
+  providerConfigRef:
+    name: home

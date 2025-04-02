@@ -1,0 +1,16 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  labels:
+    app: keycloak
+    app.kubernetes.io/instance: example-kc
+  name: keycloak-ingress
+  namespace: keycloak
+spec:
+  defaultBackend:
+    service:
+      name: keycloak-instance-service
+      port:
+        name: http
+  rules:
+  - host: keycloak.local.amazinglyabstract.it
