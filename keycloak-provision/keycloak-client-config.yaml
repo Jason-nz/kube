@@ -24,7 +24,7 @@ spec:
     validPostLogoutRedirectUris:
       - https://files.thecullensnz.com/login
     validRedirectUris:
-      - https://files.thecullensnz.com/index.php/apps/user_oidc/code
+      - https://files.thecullensnz.com/*
     webOrigins:
       - https://files.thecullensnz.com
     realmIdRef:
