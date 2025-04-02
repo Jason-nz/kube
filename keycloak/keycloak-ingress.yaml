@@ -13,4 +13,4 @@ spec:
       port:
         name: http
   rules:
-  - host: login.thecullensnz.com
+  - host: "login.thecullensnz.com" 
