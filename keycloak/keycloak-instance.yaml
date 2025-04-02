@@ -1,0 +1,44 @@
+apiVersion: k8s.keycloak.org/v2alpha1
+kind: Keycloak
+metadata:
+  name: keycloak-instance
+  namespace: keycloak
+spec:
+  instances: 1
+  db:
+    vendor: postgres
+    host: postgres-db
+    usernameSecret:
+      name: keycloak-db-secret
+      key: username
+    passwordSecret:
+      name: keycloak-db-secret
+      key: password
+  http:
+    httpEnabled: true
+  hostname:
+    hostname: https://keycloak.local.amazinglyabstract.it
+    backchannelDynamic: true
+  proxy:
+    headers: xforwarded
+  ingress:
+    enabled: false
+  bootstrapAdmin:
+    service:
+      secret: keycloak-credentials
+    user:
+      secret: keycloak-credentials
+---
+apiVersion: v1
+kind: Secret
+metadata:
+  name: keycloak-credentials
+  namespace: keycloak
+  labels:
+    type: provider-credentials
+type: Opaque
+stringData:
+  client-id: admin-client
+  client-secret: WZKa25YAZsqX8nIMqPAd8paengrnILHh
+  username: admin
+  password: WZKa25YAZsqX8nIMqPAd8paengrnILHh
