@@ -20,6 +20,11 @@ nextcloud:
     # This is the Cluster Ip of the loadbalancer
     - name: TRUSTED_PROXIES
       value: 10.42.0.109
+    - name: KEYCLOAK_CLIENT_SECRET
+      valueFrom:
+        secretKeyRef:
+          name: nextcloud-oauth-client
+          key: attribute.client_secret
   extraVolumes:
     - name: post-installation-scripts
       configMap:
