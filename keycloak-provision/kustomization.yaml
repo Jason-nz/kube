@@ -6,3 +6,4 @@ commonLabels:
 resources:
 - provider-keycloak-admin.yaml
 - keycloak-client-config.yaml
+- users.yaml
