@@ -12,3 +12,5 @@ spec:
     username: bob
     realmIdRef:
       name: home
+  providerConfigRef:
+    name: home
