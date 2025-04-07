@@ -2,6 +2,7 @@ apiVersion: user.keycloak.crossplane.io/v1alpha1
 kind: User
 metadata:
   name: bob
+  namespace: crossplane
 spec:
   forProvider:
     enabled: true
