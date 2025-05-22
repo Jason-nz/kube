@@ -22,7 +22,7 @@ spec:
     baseUrl: https://files.thecullensnz.com/
     standardFlowEnabled: true
     validPostLogoutRedirectUris:
-      - https://files.thecullensnz.com/login
+      - https://files.thecullensnz.com/
     validRedirectUris:
       - https://files.thecullensnz.com/*
     webOrigins:
