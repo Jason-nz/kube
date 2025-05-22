@@ -18,5 +18,11 @@ data:
     php /var/www/html/occ config:system:set maintenance_window_start --type=integer --value=1
     php /var/www/html/occ db:add-missing-indices
     php /var/www/html/occ maintenance:repair --include-expensive
-    php /var/www/html/occ user_oidc:provider keycloak --clientid="nextcloud" --clientsecret=$KEYCLOAK_CLIENT_SECRET --discoveryuri="https://login.thecullensnz.com/realms/home/.well-known/openid-configuration"
+    php /var/www/html/occ user_oidc:provider keycloak --clientid="nextcloud" \
+                                                      --clientsecret=$KEYCLOAK_CLIENT_SECRET \
+                                                      --discoveryuri="https://login.thecullensnz.com/realms/home/.well-known/openid-configuration" \
+                                                      --mapping-groups="roles" \
+                                                      --group-provisioning=1 \
+                                                      --group-whitelist-regex="/admin/"
+                                                      --mapping-uid="preferred_username"
     echo "Nextcloud apps installation complete."
