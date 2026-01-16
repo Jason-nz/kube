@@ -36,7 +36,7 @@ nextcloud:
 
 image:
   repository: nextcloud
-  tag: 31.0.5-fpm-alpine
+  tag: 31.0.13-fpm-alpine
 
 nginx:
   enabled: true
