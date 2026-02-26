@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
         - name: postgresql-db
-          image: postgres:17.5
+          image: postgres:17.9
           volumeMounts:
             - mountPath: /data
               name: cache-volume
